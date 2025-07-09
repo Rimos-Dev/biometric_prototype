@@ -1,0 +1,100 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Alinea al inicio para dejar espacio arriba */
+    min-height: 100vh;
+    background-color: #f4f4f4;
+    margin: 20px; /* Añade un margen general */
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 25px;
+}
+
+.video-container {
+    margin-bottom: 20px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden; /* Para que el video no se salga del borde */
+}
+
+video {
+    width: 100%;
+    height: auto;
+    display: block; /* Elimina espacio extra debajo del video */
+    transform: scaleX(-1); /* Efecto espejo */
+}
+
+.controls button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.controls button:hover:not(:disabled) {
+    background-color: #0056b3;
+}
+
+.controls button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.message-area {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #e9ecef;
+    border-radius: 5px;
+    color: #333;
+}
+
+#statusMessage {
+    font-weight: bold;
+}
+
+.debug-area {
+    margin-top: 30px;
+    text-align: left;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.debug-area h2 {
+    font-size: 1.2em;
+    color: #555;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+#debugOutput {
+    white-space: pre-wrap; /* Mantiene saltos de línea y espacios */
+    word-wrap: break-word; /* Rompe palabras largas */
+    max-height: 200px;
+    overflow-y: auto; /* Desplazamiento si hay mucho contenido */
+    background-color: #e9ecef;
+    padding: 10px;
+    border-radius: 3px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.9em;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototipo Biométrico Facial con IA</title>
+    <!-- Enlace al archivo de estilos CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- Contenedor principal de la aplicación -->
+    <div class="container">
+        <h1>Sistema de Acceso Biométrico Facial</h1>
+
+        <!-- Área para la entrada del nombre de usuario -->
+        <div class="input-area">
+            <label for="usernameInput">Nombre de Usuario:</label>
+            <input type="text" id="usernameInput" placeholder="Introduce tu nombre de usuario" value="test_user">
+        </div>
+
+        <!-- Contenedores para el video de la webcam y el canvas de captura -->
+        <div>
+            <!-- Elemento de video para mostrar el stream de la webcam -->
+            <video id="webcamVideo" autoplay playsinline></video>
+            <!-- Canvas oculto donde se captura la imagen de la webcam -->
+            <canvas id="webcamCanvas" style="display: none;"></canvas>
+        </div>
+
+        <!-- Controles de la interfaz de usuario -->
+        <div class="controls">
+            <button id="startButton">Iniciar Cámara</button>
+            <button id="captureButton" disabled>Capturar Rostro</button>
+            <button id="registerButton" disabled>Registrar Usuario</button>
+            <button id="authenticateButton" disabled>Autenticar Usuario</button>
+        </div>
+
+        <!-- Área para mostrar mensajes de estado al usuario -->
+        <div class="massage-area">
+            <p id="statusMessage">Esperando inicio de cámara...</p>
+        </div>
+
+        <!-- Área para la consola de depuración (muestra logs internos) -->
+        <div class="debug-area">
+            <h2>Consola de Depuración</h2>
+            <pre id="debugOutput"></pre>
+        </div>
+    </div>
+
+    <!-- Enlace al archivo JavaScript principal de la aplicación -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
